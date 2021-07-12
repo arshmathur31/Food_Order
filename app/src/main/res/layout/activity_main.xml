@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:onClick="banner_about"/>
+
+
+    <TextView
+        android:id="@+id/menuTv"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/standart"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textColor="#43596f"
+        android:textSize="40sp" />
+
+    <ScrollView
+
+        android:id="@+id/myScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/pizza_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/pizza"
+                        android:src="@drawable/pizza" />
+
+                    <TextView
+                        android:id="@+id/pizza_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/pizza_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Pizza"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/pizza_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pizza_textView"
+                        android:layout_toRightOf="@id/pizza_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 150"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/pizza_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/pizza_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/pizza_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/pizza_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:gravity="center"
+                        android:onClick="add_to_list"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/burger_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/burger"
+                        android:src="@drawable/burger" />
+
+                    <TextView
+                        android:id="@+id/burger_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/burger_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Burger"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/burger_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/burger_textView"
+                        android:layout_toRightOf="@id/burger_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 100"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/burger_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/burger_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/burger_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/burger_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:gravity="center"
+                        android:onClick="add_to_list"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/noodle_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/noodle"
+                        android:src="@drawable/noodle" />
+
+                    <TextView
+                        android:id="@+id/noodle_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/noodle_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Noodles"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/noodles_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/noodle_textView"
+                        android:layout_toRightOf="@id/noodle_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 70"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/noodles_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/noodle_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/noodle_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/noodle_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:gravity="center"
+                        android:onClick="add_to_list"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/sweet_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/sweet"
+                        android:src="@drawable/sweet" />
+
+                    <TextView
+                        android:id="@+id/sweet_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/sweet_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Sweet"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/sweet_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sweet_textView"
+                        android:layout_toRightOf="@id/sweet_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 50"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/sweet_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/sweet_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/sweet_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/sweet_button"
+                        android:layout_width="50dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/drink_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/colddrink"
+                        android:src="@drawable/colddrink" />
+
+                    <TextView
+                        android:id="@+id/drink_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/drink_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Cold Drink"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/drink_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/drink_textView"
+                        android:layout_toRightOf="@id/drink_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 50"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/drink_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/drink_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/drink_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/drink_button"
+                        android:layout_width="50dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/water_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/water"
+                        android:src="@drawable/water" />
+
+                    <TextView
+                        android:id="@+id/water_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/water_photo"
+                        android:fontFamily="@font/french"
+                        android:text="Water"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/water_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/water_textView"
+                        android:layout_toRightOf="@id/water_photo"
+                        android:fontFamily="@font/gatholic"
+                        android:text="Rs 35"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/water_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/water_button"
+                        android:layout_marginLeft="0dp"
+
+                        android:layout_toLeftOf="@id/water_button"
+                        android:background="@drawable/minus"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/water_button"
+                        android:layout_width="50dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/plus"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+          android:background="#ea7a66"
+        android:text="Place Order"
+        android:onClick="place_order"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_marginBottom="20dp"/>
+
+
+
+</LinearLayout>
